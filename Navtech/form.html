@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <div class="body">
+      <form class="form">
+        <h1>Software Request</h1>
+        <hr />
+        <label class="label" id="name" for="name"> Name </label>
+        <br />
+        <input class="box" type="text" />
+        <br />
+        <label class="label" for="employeid"> Employee ID </label>
+        <br />
+        <input class="box" type="number" />
+        <br />
+        <label class="label" for="email"> Email </label>
+        <br />
+        <input class="box" type="email" />
+        <br />
+        <label class="label" for="mobileno"> Mobile NO </label>
+        <br />
+        <input class="box" type="number" />
+        <h3>Which software do you require?</h3>
+
+        <input type="checkbox" id="a" />
+        <label for="a"> Software A </label>
+        <br />
+        <input type="checkbox" id="b" />
+        <label for="b"> Software B </label>
+        <br />
+        <input type="checkbox" id="c" />
+        <label for="c"> Software C </label>
+
+        <h3>How urgently do you need it?</h3>
+
+        <input type="radio" name="time" id="soon" />
+        <label for="soon"> As soon as possible </label>
+        <br />
+        <input type="radio" name="time" id="weeks" />
+        <label for="weeks"> within 2 to 3 weeks </label>
+        <br />
+        <input type="radio" name="time" id="no" />
+        <label for="no"> I'm in no hurry </label>
+        <br />
+        <button class="btn3">Request</button>
+      </form>
+    </div>
+  </body>
+</html>

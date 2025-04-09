@@ -1,0 +1,59 @@
+.body{
+    background-color: rgb(111, 199, 243);
+}
+.cards{
+    display: flex;
+    margin: 60px;
+    justify-content: space-evenly;
+   
+}
+
+.card1{
+    background-color: white;
+   width: 40%;
+   border-radius: 10px;
+}
+
+.card2{
+    background-color: white;
+    width: 40%;
+    border-radius: 10px;
+}
+
+.image img{
+    width: 100%;
+}
+.detail{
+    padding: 10px;
+}
+.rounded{
+    display: flex;
+    padding-top: 80px;
+    margin: 0px;
+   
+}
+.para{
+      margin-left: 5px;
+      margin-top: 0%;
+}
+#btn1{
+     border-radius: 50px;
+     background-color: rgb(24, 136, 228);
+}
+#btn2{
+    border-radius: 50px;
+    background-color: rgb(227, 246, 21);
+}
+.img{
+    border-radius: 100px;
+    
+}
+
+.btn:hover{
+
+    background-color: white;
+    color: gray;
+    border: none;
+    transition-duration: 0.4s ;
+    cursor: pointer;
+}
