@@ -35,27 +35,25 @@ stages:
         targetPath: '$(Build.ArtifactStagingDirectory)'
         artifact: 'drop'
 
-# Deploy Stage
+
 - stage: Deploy
   displayName: 'Deploy Stage'
   dependsOn: Build
   condition: succeeded()
 
   jobs:
-  - deployment: DeployWebApp
-    environment: 'Production'
+  - job: DeployWebApp
+    displayName: 'Deploy to Azure Web App'
 
-    strategy:
-      runOnce:
-        deploy:
-          steps:
+    steps:
+    - download: current
+      artifact: drop
 
-          - download: current
-            artifact: drop
-
-          - task: AzureWebApp@1
-            displayName: 'Deploy to Azure Web App'
-            inputs:
-              azureSubscription: 'Azure subscription 1'
-              appName: 'DevOps'
-              package: '$(Pipeline.Workspace)/drop/**/*.zip'
+    - task: AzureWebApp@1
+      displayName: 'Deploy Azure Web App'
+      inputs:
+        azureSubscription: 'Azure subscription 1'
+        appType: 'webApp'
+        appName: 'DevOps'
+        package: '$(Pipeline.Workspace)/drop/**/*.zip'
+         
