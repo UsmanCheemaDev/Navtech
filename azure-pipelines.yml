@@ -14,7 +14,7 @@ steps:
   displayName: 'Run a one-line script'
 
   
-ariables:
+Variables:
   azureServiceConnection: 'DevOps Project'
 
 task: AzureWebApp@1
