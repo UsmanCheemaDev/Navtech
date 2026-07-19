@@ -17,12 +17,13 @@ steps:
 ariables:
   azureServiceConnection: 'DevOps Project'
 
-steps:
-- task: AzureWebApp@1
+task: AzureWebApp@1
+  displayName: 'Azure Web App pe deploy karo'
   inputs:
-    azureSubscription: $(Azure subscription 1)
+    azureSubscription: 'AzureConnection'
+    appType: 'webAppLinux'
     appName: 'DevOps'
-    package: '$(Pipeline.Workspace)/drop/app.zip'
+    package: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
