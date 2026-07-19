@@ -18,12 +18,11 @@ ariables:
   azureServiceConnection: 'DevOps Project'
 
 task: AzureWebApp@1
-  displayName: 'Azure Web App pe deploy karo'
+  displayName: 'DevOps'
   inputs:
-    azureSubscription: 'AzureConnection'
+    azureSubscription: 'Azure subscription 1'
     appType: 'webAppWindows'
     appName: 'DevOps'
-    package: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
