@@ -13,16 +13,15 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-  
-Variables:
+variables:
   azureServiceConnection: 'DevOps Project'
 
-task: AzureWebApp@1
-  displayName: 'DevOps'
+steps:
+- task: AzureWebApp@1
   inputs:
-    azureSubscription: 'Azure subscription 1'
-    appType: 'webAppWindows'
+    azureSubscription: $(azureServiceConnection)
     appName: 'DevOps'
+    package: '$(Pipeline.Workspace)/drop/app.zip'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
