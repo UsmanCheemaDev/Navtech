@@ -21,7 +21,7 @@ task: AzureWebApp@1
   displayName: 'Azure Web App pe deploy karo'
   inputs:
     azureSubscription: 'AzureConnection'
-    appType: 'webAppLinux'
+    appType: 'webAppWindows'
     appName: 'DevOps'
     package: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
 
