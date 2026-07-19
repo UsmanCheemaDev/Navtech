@@ -15,8 +15,8 @@ steps:
 
 
 variables:
-  azureServiceConnection: 'My-Azure-Service-Connection'
-  appName: 'my-webapp'
+  azureServiceConnection: 'DevOps Project'
+  appName: 'DevOps'
   
 - script: |
     echo Add other tasks to build, test, and deploy your project.
